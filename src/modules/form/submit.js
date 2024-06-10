@@ -2,17 +2,15 @@ import dayjs from 'dayjs'
 const form = document.querySelector("form")
 const selectedDate = document.getElementById("date")
 
-// Current date for formatting the input
+// Date atual para formatar o input
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
-// Load the current date
+// Carrega a data atual e define a data minima como sendo a data atual
 selectedDate.value = inputToday
-
-// Defines the minimum date that can be selected
 selectedDate.min = inputToday
 
 form.onsubmit = (event) => {
-  // Prevent the submit event from reloading the page
+  // Previne o comportamento padrão de carregar a pagina 
   event.preventDefault();
 
 }
